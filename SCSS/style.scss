@@ -1,0 +1,128 @@
+/* PAGE */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('font/Roboto/Roboto.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('font/Roboto/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('font/Roboto/Roboto-Light.ttf');
+}
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+html {
+   max-width: 1440px;
+   margin: auto; 
+}
+
+body {
+    font-family: 'Roboto', 'Sans serif';
+    margin: 0px;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* PAGE */
+
+/* HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 0px 20px rgb(167, 167, 167);
+    
+    &_logo {
+        margin: auto;
+        width: 200px;
+        padding: 15px 0px 15px 0px;
+    }
+}
+
+/* HEADER */
+
+/* LOCATION */
+
+.location {
+    display: flex;
+    justify-content: center;
+    margin-top: 65px;
+    padding: 5px;
+    background-color: #e7e7e7;
+    
+    &_icon {
+        font-size: 23px;
+        margin-right: 20px;
+    }
+
+    &_city {
+        font-size: 20px;
+    }
+}
+
+i.fa-solid.location_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LOCATION */
+
+.explorer {
+    background-color: #e7e7e762;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0px 40px 0px;
+
+    &_title {
+        font-family: 'Roboto-Bold';
+        font-size: 35px;
+        margin: 10px 5px;
+    }
+
+    &_subtitle {
+        font-family: 'Roboto-Light';
+        font-size: 25px;
+    }
+
+    &_link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 330px;
+        height: 80px;
+        margin: 30px;
+        color: white;
+        font-size: 25px;
+        background: linear-gradient($color-secondary, $color-primary);
+        border-radius: 40px;
+    }
+}
+
+/* EXPLORER */

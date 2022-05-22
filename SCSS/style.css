@@ -1,1 +1,150 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+/* PAGE */
+@font-face {
+  font-family: 'Roboto';
+  src: url("font/Roboto/Roboto.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("font/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url("font/Roboto/Roboto-Light.ttf");
+}
+
+html {
+  max-width: 1440px;
+  margin: auto;
+}
+
+body {
+  font-family: 'Roboto', 'Sans serif';
+  margin: 0px;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* PAGE */
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 5px 0px 20px #a7a7a7;
+          box-shadow: 5px 0px 20px #a7a7a7;
+}
+
+.header_logo {
+  margin: auto;
+  width: 200px;
+  padding: 15px 0px 15px 0px;
+}
+
+/* HEADER */
+/* LOCATION */
+.location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 65px;
+  padding: 5px;
+  background-color: #e7e7e7;
+}
+
+.location_icon {
+  font-size: 23px;
+  margin-right: 20px;
+}
+
+.location_city {
+  font-size: 20px;
+}
+
+i.fa-solid.location_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* LOCATION */
+.explorer {
+  background-color: #e7e7e762;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 50px 0px 40px 0px;
+}
+
+.explorer_title {
+  font-family: 'Roboto-Bold';
+  font-size: 35px;
+  margin: 10px 5px;
+}
+
+.explorer_subtitle {
+  font-family: 'Roboto-Light';
+  font-size: 25px;
+}
+
+.explorer_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 330px;
+  height: 80px;
+  margin: 30px;
+  color: white;
+  font-size: 25px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 40px;
+}
+
+/* EXPLORER */
+/*# sourceMappingURL=style.css.map */
