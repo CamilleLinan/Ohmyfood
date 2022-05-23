@@ -1,11 +1,9 @@
 # Ohmyfood
 
-Add Header
+Add Operation
 
---> Ajout du logo
+--> Ajout de la section OPERATION
 
---> Ajout de la barre de ville choisie
+--> Ajout de favicon
 
---> Ajout de la baniere avec le lien d'exploration
-
-+ ajout des fonts, ajout des variables pour les couleurs
+--> Ajout de version responsive pour la section OPERATION

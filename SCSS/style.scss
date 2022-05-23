@@ -19,28 +19,20 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
-html {
-   max-width: 1440px;
-   margin: auto; 
-}
-
 body {
     font-family: 'Roboto', 'Sans serif';
     margin: 0px;
-}
 
-button, a {
-    cursor: pointer;
-}
+    main {
+        max-width: 1440px;
+        margin: auto;  
+    }
 
-button {
-    border: none;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-    color: black;
+    a {
+        cursor: pointer;
+        text-decoration: none;
+        color: black;
+    }
 }
 
 /* PAGE */
@@ -53,6 +45,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: white;
     box-shadow: 5px 0px 20px rgb(167, 167, 167);
     
     &_logo {
@@ -71,7 +64,7 @@ a {
     justify-content: center;
     margin-top: 65px;
     padding: 5px;
-    background-color: #e7e7e7;
+    background-color: #dedcdc;
     
     &_icon {
         font-size: 23px;
@@ -91,14 +84,17 @@ i.fa-solid.location_icon {
 
 /* LOCATION */
 
+/* EXPLORER */
+
 .explorer {
-    background-color: #e7e7e762;
+    background: url('../images/logo/omf_banner.png');
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 50px 0px 40px 0px;
+    padding: 50px 5px 40px 5px;
 
     &_title {
         font-family: 'Roboto-Bold';
@@ -122,7 +118,72 @@ i.fa-solid.location_icon {
         font-size: 25px;
         background: linear-gradient($color-secondary, $color-primary);
         border-radius: 40px;
+        box-shadow: 2px 5px 20px rgb(167, 167, 167);
     }
 }
 
 /* EXPLORER */
+
+/* OPERATION */
+
+.operation {
+    margin: 60px 0px 60px 0px;
+    padding: 0px 15px;
+
+    &_header {
+        font-family: 'Roboto-Bold';
+        font-size: 18px;
+        margin: 0px 0px 35px 20px;
+    }
+
+    &_cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-left: 10px;
+
+        &_card {
+            display: flex;
+            align-items: center;
+            background-color: #e7e7e762;
+            width: 30%;
+            height: 110px;
+            box-shadow: 2px 5px 20px rgba(167, 167, 167, 0.5);
+            border-radius: 30px;
+            font-size: 17px;
+            transition: transform 250ms ease-in-out;
+            &:hover {
+                transform: scale(1.02);
+                background-color: #9256dc21;
+                .operation_cards_card_icon {
+                        color: $color-primary;
+                }
+            }
+
+            &_number {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 40px;
+                height: 40px;
+                margin-left: -20px;
+                color: white;
+                background-color: $color-primary;
+                border-radius: 30px;
+            }
+
+            &_icon {
+                color: rgba(0, 0, 0, 0.5);
+                padding: 0px 20px;
+                font-size: 25px;
+            }
+
+            &_title {
+                font-family: 'Roboto-Bold';
+                padding-right: 5px;
+            }
+        }
+    }
+}
+
+/* OPERATION */
