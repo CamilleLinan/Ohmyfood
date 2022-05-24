@@ -14,14 +14,22 @@
   src: url("font/Roboto/Roboto-Light.ttf");
 }
 
-body {
-  font-family: 'Roboto', 'Sans serif';
-  margin: 0px;
+.Roboto_bold {
+  font-family: 'Roboto-Bold';
 }
 
-body main {
+.Roboto_light {
+  font-family: 'Roboto-Light';
+}
+
+.center {
   max-width: 1440px;
   margin: auto;
+}
+
+body {
+  font-family: 'Roboto', 'Sans serif';
+  margin: 0px auto;
 }
 
 body a {
@@ -111,13 +119,11 @@ i.fa-solid.location_icon {
 }
 
 .explorer_title {
-  font-family: 'Roboto-Bold';
   font-size: 35px;
   margin: 10px 5px;
 }
 
 .explorer_subtitle {
-  font-family: 'Roboto-Light';
   font-size: 25px;
 }
 
@@ -141,17 +147,26 @@ i.fa-solid.location_icon {
   border-radius: 40px;
   -webkit-box-shadow: 2px 5px 20px #a7a7a7;
           box-shadow: 2px 5px 20px #a7a7a7;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.explorer_link:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  background: -webkit-gradient(linear, left top, left bottom, from(#cd6bb2), to(#9266c8));
+  background: linear-gradient(180deg, #cd6bb2 0%, #9266c8 100%);
 }
 
 /* EXPLORER */
 /* OPERATION */
 .operation {
-  margin: 60px 0px 60px 0px;
-  padding: 0px 15px;
+  padding: 30px 15px;
 }
 
 .operation_header {
-  font-family: 'Roboto-Bold';
   font-size: 18px;
   margin: 0px 0px 35px 20px;
 }
@@ -189,8 +204,8 @@ i.fa-solid.location_icon {
 }
 
 .operation_cards_card:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
   background-color: #9256dc21;
 }
 
@@ -223,9 +238,120 @@ i.fa-solid.location_icon {
 }
 
 .operation_cards_card_title {
-  font-family: 'Roboto-Bold';
   padding-right: 5px;
 }
 
 /* OPERATION */
+/* RESTAURANTS */
+.restaurants {
+  background-color: #F2F2F2;
+  margin-top: 40px;
+  padding-top: 10px;
+}
+
+.restaurants_header_title {
+  padding: 30px 0px 30px 30px;
+  font-size: 27px;
+}
+
+.restaurants_cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.restaurants_card {
+  margin: 10px 0px 20px 0px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 16px #0000002e;
+          box-shadow: 0 0 16px #0000002e;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 47%;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.restaurants_card:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.restaurants_card_fig {
+  margin: 0;
+}
+
+.restaurants_card_fig_img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 300px;
+}
+
+.restaurants_card_fig_caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0px 0px 5px 25px;
+  line-height: 10px;
+}
+
+.restaurants_card_icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding-right: 40px;
+  font-size: 25px;
+  width: 25px;
+  height: 25px;
+}
+
+.restaurants_card_icons-notLiked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.restaurants_card_icons-liked {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+  opacity: 0;
+}
+
+.restaurants_card_icons-liked:hover {
+  opacity: 1;
+}
+
+/* RESTAURANTS */
 /*# sourceMappingURL=style.css.map */

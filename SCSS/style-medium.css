@@ -15,5 +15,11 @@
     -webkit-box-shadow: 1px 2px 20px rgba(167, 167, 167, 0.5);
             box-shadow: 1px 2px 20px rgba(167, 167, 167, 0.5);
   }
+  /* OPERATION */
+  /* RESTAURANTS */
+  .restaurants_card_fig_img {
+    height: 250px;
+  }
+  /* RESTAURANTS */
 }
 /*# sourceMappingURL=style-medium.css.map */

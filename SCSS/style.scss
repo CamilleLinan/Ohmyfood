@@ -15,18 +15,26 @@
     src: url('font/Roboto/Roboto-Light.ttf');
 }
 
+.Roboto_bold {
+    font-family: 'Roboto-Bold';
+}
+
+.Roboto_light {
+    font-family: 'Roboto-Light';
+}
+
+.center {
+    max-width: 1440px;
+    margin: auto;
+}
+
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
 body {
     font-family: 'Roboto', 'Sans serif';
-    margin: 0px;
-
-    main {
-        max-width: 1440px;
-        margin: auto;  
-    }
+    margin: 0px auto;
 
     a {
         cursor: pointer;
@@ -97,13 +105,11 @@ i.fa-solid.location_icon {
     padding: 50px 5px 40px 5px;
 
     &_title {
-        font-family: 'Roboto-Bold';
         font-size: 35px;
         margin: 10px 5px;
     }
 
     &_subtitle {
-        font-family: 'Roboto-Light';
         font-size: 25px;
     }
 
@@ -119,6 +125,11 @@ i.fa-solid.location_icon {
         background: linear-gradient($color-secondary, $color-primary);
         border-radius: 40px;
         box-shadow: 2px 5px 20px rgb(167, 167, 167);
+        transition: transform 250ms ease-in-out;
+        &:hover {
+            transform: scale(1.03);
+            background: linear-gradient(180deg, rgba(205,107,178,1) 0%, rgba(146,102,200,1) 100%);
+        }
     }
 }
 
@@ -127,11 +138,9 @@ i.fa-solid.location_icon {
 /* OPERATION */
 
 .operation {
-    margin: 60px 0px 60px 0px;
-    padding: 0px 15px;
+    padding: 30px 15px;
 
     &_header {
-        font-family: 'Roboto-Bold';
         font-size: 18px;
         margin: 0px 0px 35px 20px;
     }
@@ -154,7 +163,7 @@ i.fa-solid.location_icon {
             cursor: default;
             transition: transform 250ms ease-in-out;
             &:hover {
-                transform: scale(1.02);
+                transform: scale(1.01);
                 background-color: #9256dc21;
                 .operation_cards_card_icon {
                         color: $color-primary;
@@ -180,7 +189,6 @@ i.fa-solid.location_icon {
             }
 
             &_title {
-                font-family: 'Roboto-Bold';
                 padding-right: 5px;
             }
         }
@@ -188,3 +196,92 @@ i.fa-solid.location_icon {
 }
 
 /* OPERATION */
+
+/* RESTAURANTS */ 
+
+.restaurants {
+    background-color: #F2F2F2;
+    margin-top: 40px;
+    padding-top: 10px;
+
+    &_header_title {
+        padding: 30px 0px 30px 30px;
+        font-size: 27px;
+    }
+    
+    &_cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    &_card {
+        margin: 10px 0px 20px 0px;
+        border-radius: 20px;
+        box-shadow: 0 0 16px #0000002e;
+        box-sizing: border-box;
+        width: 47%;
+        transition: transform 250ms ease-in-out;
+        &:hover {
+            transform: scale(1.01);
+        }
+
+        &_fig {
+            margin: 0;
+
+            &_img {
+                object-fit: cover;
+                border-radius: 20px 20px 0px 0px;
+                width: 100%;
+                height: 300px;
+            }
+
+            &_caption {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;
+                padding: 0px 0px 5px 25px;
+                line-height: 10px;
+            }
+        }
+
+        &_icons {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-right: 40px;
+            font-size: 25px;
+            width: 25px;
+            height: 25px;
+
+            &-notLiked {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            &-liked {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(160deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: opacity 250ms ease-in-out;
+                opacity: 0;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+/* RESTAURANTS */ 
