@@ -391,4 +391,34 @@ i.fa-solid.location_icon {
 }
 
 /* FOOTER */
+/* PAGES MENU */
+@font-face {
+  font-family: 'Shrikhand';
+  src: url("font/Shrikhand/Shrikhand.ttf");
+}
+
+.banner_img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.menu_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+}
+
+.menu_header_title {
+  font-family: 'Shrikhand';
+  margin-right: 10px;
+}
 /*# sourceMappingURL=style.css.map */
