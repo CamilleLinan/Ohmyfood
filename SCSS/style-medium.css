@@ -1,4 +1,5 @@
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+  /* PAGE */
   /* OPERATION */
   .operation_cards {
     -webkit-box-orient: vertical;
@@ -21,5 +22,32 @@
     height: 250px;
   }
   /* RESTAURANTS */
+  /* PAGE */
+  /* PAGE MENU */
+  /* HEADER */
+  .header_icon {
+    font-size: 20px;
+  }
+  /* HEADER */
+  /* MENU */
+  .menu_header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .menu_header_title {
+    margin-left: 20px;
+  }
+  .menu_categories {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu_card_check {
+    margin-right: -190px;
+  }
+  /* MENU */
+  /* PAGE MENU */
 }
 /*# sourceMappingURL=style-medium.css.map */

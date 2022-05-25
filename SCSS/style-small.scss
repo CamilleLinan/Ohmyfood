@@ -6,8 +6,6 @@ main {
     max-width: 768px; 
 }
 
-/* PAGE */ 
-
 /* EXPLORER */ 
 
 .explorer {
@@ -47,5 +45,58 @@ main {
 }
 
 /* RESTAURANTS */ 
+
+/* PAGE */ 
+
+
+/* PAGE MENU */ 
+
+/* HEADER */ 
+
+.header_icon {
+    font-size: 20px;
+}
+
+/* HEADER */ 
+
+/* BANNER */
+
+.banner_img {
+    height: 430px;
+}
+
+/* BANNER */ 
+
+/* MENU */
+
+.icons {
+    font-size: 20px;
+}
+
+.menu {
+    position: relative;
+    z-index: 5;
+    border-radius: 40px 40px 0px 0px;
+    margin-top: -70px;
+    
+    &_header {
+        justify-content: space-between;
+        padding-top: 0;
+
+        &_title {
+            margin-left: 20px;
+            font-size: 25px;
+        }
+    }
+
+    &_categories {
+        flex-direction: column;
+    }
+
+}
+
+/* MENU */
+
+/* PAGE MENU */
 
 }

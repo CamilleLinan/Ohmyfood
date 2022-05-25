@@ -4,7 +4,6 @@
     min-width: 500px;
     max-width: 768px;
   }
-  /* PAGE */
   /* EXPLORER */
   .explorer {
     background: none;
@@ -37,5 +36,45 @@
     height: 250px;
   }
   /* RESTAURANTS */
+  /* PAGE */
+  /* PAGE MENU */
+  /* HEADER */
+  .header_icon {
+    font-size: 20px;
+  }
+  /* HEADER */
+  /* BANNER */
+  .banner_img {
+    height: 430px;
+  }
+  /* BANNER */
+  /* MENU */
+  .icons {
+    font-size: 20px;
+  }
+  .menu {
+    position: relative;
+    z-index: 5;
+    border-radius: 40px 40px 0px 0px;
+    margin-top: -70px;
+  }
+  .menu_header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 0;
+  }
+  .menu_header_title {
+    margin-left: 20px;
+    font-size: 25px;
+  }
+  .menu_categories {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  /* MENU */
+  /* PAGE MENU */
 }
 /*# sourceMappingURL=style-small.css.map */

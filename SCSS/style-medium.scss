@@ -1,4 +1,5 @@
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+/* PAGE */
 
 /* OPERATION */
 
@@ -25,5 +26,42 @@
 }
 
 /* RESTAURANTS */ 
+
+/* PAGE */ 
+
+
+/* PAGE MENU */ 
+
+/* HEADER */ 
+
+.header_icon {
+    font-size: 20px;
+}
+
+/* HEADER */ 
+
+/* MENU */
+
+.menu {
+    &_header {
+        justify-content: space-between;
+
+        &_title {
+            margin-left: 20px;
+        }
+    }
+
+    &_categories {
+        flex-direction: column;
+    }
+
+    &_card_check {
+        margin-right: -190px;
+    }
+}
+
+/* MENU */
+
+/* PAGE MENU */ 
 
 }
