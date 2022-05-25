@@ -517,31 +517,6 @@ input {
   opacity: 0;
 }
 
-.menu_card:nth-child(1) {
-  -webkit-animation-delay: calc(1s / 5);
-          animation-delay: calc(1s / 5);
-}
-
-.menu_card:nth-child(2) {
-  -webkit-animation-delay: calc(2s / 5);
-          animation-delay: calc(2s / 5);
-}
-
-.menu_card:nth-child(3) {
-  -webkit-animation-delay: calc(3s / 5);
-          animation-delay: calc(3s / 5);
-}
-
-.menu_card:nth-child(4) {
-  -webkit-animation-delay: calc(4s / 5);
-          animation-delay: calc(4s / 5);
-}
-
-.menu_card:nth-child(5) {
-  -webkit-animation-delay: calc(5s / 5);
-          animation-delay: calc(5s / 5);
-}
-
 .menu_card:hover .menu_card_check {
   margin: 0;
 }
@@ -617,6 +592,31 @@ input {
   100% {
     opacity: 1;
   }
+}
+
+.menu_card:nth-child(5n + 1) {
+  -webkit-animation-delay: calc(1 / 5);
+          animation-delay: calc(1 / 5);
+}
+
+.menu_card:nth-child(5n + 2) {
+  -webkit-animation-delay: calc(1 / 5);
+          animation-delay: calc(1 / 5);
+}
+
+.menu_card:nth-child(5n + 3) {
+  -webkit-animation-delay: calc(1 / 5);
+          animation-delay: calc(1 / 5);
+}
+
+.menu_card:nth-child(5n + 4) {
+  -webkit-animation-delay: calc(1 / 5);
+          animation-delay: calc(1 / 5);
+}
+
+.menu_card:nth-child(5n + 5) {
+  -webkit-animation-delay: calc(1 / 5);
+          animation-delay: calc(1 / 5);
 }
 
 /* MENU */
