@@ -135,6 +135,12 @@ i.fa-solid.location_icon {
 }
 
 .explorer_link {
+  width: 320px;
+  height: 70px;
+  font-size: 23px;
+}
+
+.btn_main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,27 +150,24 @@ i.fa-solid.location_icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 320px;
-  height: 70px;
   margin: 30px;
   color: white;
-  font-size: 23px;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 40px;
   -webkit-box-shadow: 2px 5px 20px #a7a7a7;
           box-shadow: 2px 5px 20px #a7a7a7;
-  -webkit-transition: -webkit-transform 250ms ease-in-out;
-  transition: -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
 }
 
-.explorer_link:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-  -webkit-filter: brightness(1.03);
-          filter: brightness(1.03);
+.btn_main:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  background: -webkit-gradient(linear, left top, left bottom, from(#dd8cc6), to(#b28cde));
+  background: linear-gradient(180deg, #dd8cc6 0%, #b28cde 100%);
 }
 
 /* EXPLORER */
@@ -659,6 +662,25 @@ input {
 .delay_8 {
   -webkit-animation-delay: 1.33333s;
           animation-delay: 1.33333s;
+}
+
+.command {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0px;
+}
+
+.command_link {
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
 }
 
 /* MENU */
