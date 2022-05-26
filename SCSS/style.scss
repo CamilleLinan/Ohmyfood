@@ -281,7 +281,7 @@ i.fa-solid.location_icon {
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        transition: opacity 250ms ease-in-out;
+        transition: opacity 500ms ease-in-out;
         opacity: 0;
         &:hover {
             opacity: 1;
@@ -334,6 +334,18 @@ i.fa-solid.location_icon {
     src: url('font/Shrikhand/Shrikhand.ttf'); 
 }
 
+@keyframes itemAppear {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 input {
     display: none;
 }
@@ -357,7 +369,7 @@ input {
 .banner_img {
     object-fit: cover;
     width: 100%;
-    height: 450px;
+    height: 400px;
 }
 
 /* BANNER */ 
@@ -413,7 +425,6 @@ input {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        line-height: 10px;
         background-color: white;
         border-radius: 20px;
         box-shadow: 0 0 10px #00000016;
@@ -421,10 +432,10 @@ input {
         width: 95%;
         height: 80px;
         overflow: hidden;
-        text-overflow: ellipsis;
-        animation: itemAppear 8000ms both;
         cursor: pointer;
-        opacity: 0;
+        animation: itemAppear 500ms ease-in-out;
+        animation-fill-mode: forwards;
+        transform: scale(0);
 
         &:hover .menu_card_check {
             margin: 0;
@@ -443,13 +454,24 @@ input {
         }
 
         &_titles {
-            padding-left: 20px;
-            flex: 2;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+            overflow: hidden;
+            & p, h4 {
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin: 5px 20px;
+            }
         }
 
         &_price {
-            padding-right: 20px;
-            flex: 0;
+            padding-right: 30px;
+            width: 10%;
+            text-align: center;
         }
 
         &_check {
@@ -458,8 +480,8 @@ input {
             justify-content: center;
             background-color: $color-tertiary;
             height: 80px;
-            width: 20%;
-            margin-right: -95px;
+            width: 25%;
+            margin-right: -100px;
             transition-duration: 600ms;
 
             &_icon {
@@ -472,19 +494,9 @@ input {
     }
 }
 
-@keyframes itemAppear {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@for $i from 1 through 5 {
-    .menu_card:nth-child(5n + #{$i}) {
-        animation-delay: calc(1 / 5);
+@for $i from 0 to 9 {
+    .delay_#{$i} {
+        animation-delay: #{$i/6}s;
     }
 }
 

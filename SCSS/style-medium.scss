@@ -52,11 +52,23 @@
     }
 
     &_categories {
-        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    &_cards {
+        width: 50%;
     }
 
-    &_card_check {
-        margin-right: -190px;
+    &_card {
+        margin: 10px 0px;
+
+        &_price {
+            padding-right: 70px;
+        }
+
+        &_check {
+            margin-right: -150px;
+        }
     }
 }
 

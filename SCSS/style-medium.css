@@ -39,13 +39,20 @@
     margin-left: 20px;
   }
   .menu_categories {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu_cards {
+    width: 50%;
+  }
+  .menu_card {
+    margin: 10px 0px;
+  }
+  .menu_card_price {
+    padding-right: 70px;
   }
   .menu_card_check {
-    margin-right: -190px;
+    margin-right: -150px;
   }
   /* MENU */
   /* PAGE MENU */

@@ -62,7 +62,7 @@ main {
 /* BANNER */
 
 .banner_img {
-    height: 430px;
+    height: 370px;
 }
 
 /* BANNER */ 
@@ -70,7 +70,7 @@ main {
 /* MENU */
 
 .icons {
-    font-size: 20px;
+    font-size: 23px;
 }
 
 .menu {
@@ -85,12 +85,27 @@ main {
 
         &_title {
             margin-left: 20px;
-            font-size: 25px;
+            font-size: 30px;
         }
     }
 
     &_categories {
         flex-direction: column;
+    }
+
+    &_card {
+        margin: 10px 0px;
+
+        &_price {
+            width: 15%;
+            padding-right: 50px;
+        }
+
+        &_check {
+            margin-right: -180px;
+            width: 30%;
+        }
+        
     }
 
 }

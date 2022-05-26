@@ -351,8 +351,8 @@ i.fa-solid.location_icon {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-transition: opacity 250ms ease-in-out;
-  transition: opacity 250ms ease-in-out;
+  -webkit-transition: opacity 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out;
   opacity: 0;
 }
 
@@ -401,6 +401,32 @@ i.fa-solid.location_icon {
   src: url("font/Shrikhand/Shrikhand.ttf");
 }
 
+@-webkit-keyframes itemAppear {
+  from {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes itemAppear {
+  from {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 input {
   display: none;
 }
@@ -423,7 +449,7 @@ input {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 450px;
+  height: 400px;
 }
 
 /* BANNER */
@@ -501,7 +527,6 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 10px;
   background-color: white;
   border-radius: 20px;
   -webkit-box-shadow: 0 0 10px #00000016;
@@ -510,11 +535,13 @@ input {
   width: 95%;
   height: 80px;
   overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-animation: itemAppear 8000ms both;
-          animation: itemAppear 8000ms both;
   cursor: pointer;
-  opacity: 0;
+  -webkit-animation: itemAppear 500ms ease-in-out;
+          animation: itemAppear 500ms ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .menu_card:hover .menu_card_check {
@@ -536,17 +563,30 @@ input {
 }
 
 .menu_card_titles {
-  padding-left: 20px;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.menu_card_titles p, .menu_card_titles h4 {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 5px 20px;
 }
 
 .menu_card_price {
-  padding-right: 20px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0;
-          flex: 0;
+  padding-right: 30px;
+  width: 10%;
+  text-align: center;
 }
 
 .menu_card_check {
@@ -561,8 +601,8 @@ input {
           justify-content: center;
   background-color: #99E2D0;
   height: 80px;
-  width: 20%;
-  margin-right: -95px;
+  width: 25%;
+  margin-right: -100px;
   -webkit-transition-duration: 600ms;
           transition-duration: 600ms;
 }
@@ -576,47 +616,49 @@ input {
           transition-duration: 800ms;
 }
 
-@-webkit-keyframes itemAppear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.delay_0 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
-@keyframes itemAppear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.delay_1 {
+  -webkit-animation-delay: 0.16667s;
+          animation-delay: 0.16667s;
 }
 
-.menu_card:nth-child(5n + 1) {
-  -webkit-animation-delay: calc(1 / 5);
-          animation-delay: calc(1 / 5);
+.delay_2 {
+  -webkit-animation-delay: 0.33333s;
+          animation-delay: 0.33333s;
 }
 
-.menu_card:nth-child(5n + 2) {
-  -webkit-animation-delay: calc(1 / 5);
-          animation-delay: calc(1 / 5);
+.delay_3 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
-.menu_card:nth-child(5n + 3) {
-  -webkit-animation-delay: calc(1 / 5);
-          animation-delay: calc(1 / 5);
+.delay_4 {
+  -webkit-animation-delay: 0.66667s;
+          animation-delay: 0.66667s;
 }
 
-.menu_card:nth-child(5n + 4) {
-  -webkit-animation-delay: calc(1 / 5);
-          animation-delay: calc(1 / 5);
+.delay_5 {
+  -webkit-animation-delay: 0.83333s;
+          animation-delay: 0.83333s;
 }
 
-.menu_card:nth-child(5n + 5) {
-  -webkit-animation-delay: calc(1 / 5);
-          animation-delay: calc(1 / 5);
+.delay_6 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.delay_7 {
+  -webkit-animation-delay: 1.16667s;
+          animation-delay: 1.16667s;
+}
+
+.delay_8 {
+  -webkit-animation-delay: 1.33333s;
+          animation-delay: 1.33333s;
 }
 
 /* MENU */

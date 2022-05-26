@@ -45,12 +45,12 @@
   /* HEADER */
   /* BANNER */
   .banner_img {
-    height: 430px;
+    height: 370px;
   }
   /* BANNER */
   /* MENU */
   .icons {
-    font-size: 20px;
+    font-size: 23px;
   }
   .menu {
     position: relative;
@@ -66,13 +66,24 @@
   }
   .menu_header_title {
     margin-left: 20px;
-    font-size: 25px;
+    font-size: 30px;
   }
   .menu_categories {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .menu_card {
+    margin: 10px 0px;
+  }
+  .menu_card_price {
+    width: 15%;
+    padding-right: 50px;
+  }
+  .menu_card_check {
+    margin-right: -180px;
+    width: 30%;
   }
   /* MENU */
   /* PAGE MENU */
