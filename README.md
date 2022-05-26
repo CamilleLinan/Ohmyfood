@@ -9,3 +9,5 @@ Add Operation
 + lien d'ancrage pour la section restaurant
 
 + animations réglées
+
++ check up HTML et CSS valide
