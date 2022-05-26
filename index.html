@@ -21,17 +21,17 @@
 <!-- MAIN -->
     <main>
 <!-- LOCATION -->
-        <section class="location">
-            <i class="fa-solid fa-location-dot location_icon"></i>
-            <h2 class="location_city">Paris, Belleville</h2>
-        </section>
+        <form class="location_search" method="GET" action="#">
+            <i class="fa-solid fa-location-dot location_search_icon"></i>
+            <input class="location_search_searchInput" type="search" placeholder="Paris, Belleville" />
+        </form>
 <!-- LOCATION -->
 
 <!-- EXPLORER -->
         <section class="explorer">
             <h1 class="explorer_title Roboto_bold">Réservez le menu qui vous convient</h1>
             <p class="explorer_subtitle Roboto_light">Décourez des restaurants d'exeption, sélectionnés par nos soins.</p>
-            <a href="#" class="explorer_link btn_main">Explorer nos restaurants</a>
+            <a href="#restaurants" class="explorer_link btn_main">Explorer nos restaurants</a>
         </section>
 <!-- EXPLORER -->
 
@@ -64,7 +64,7 @@
 <!-- OPERATION -->
 
 <!-- RESTAURANTS -->
-        <section class="restaurants">
+        <section id="restaurants" class="restaurants">
             <header class="restaurants_header">
                 <h2 class="restaurants_header_title Roboto_bold center">Restaurants</h2>
             </header>
@@ -79,13 +79,14 @@
                                     <h3 class="restaurants_card_fig_caption_title Roboto_bold">La palette du goût</h3>
                                     <p class="restaurants_card_city Roboto_light">Ménilmontant</p>
                                 </div>
-                                <div class="icons">
-                                    <i class="fa-regular fa-heart icons-notLiked"></i>
-                                    <i class="fa-solid fa-heart icons-liked"></i>
-                                </div>
                             </figcaption>
                         </figure>
                     </a>
+                    <label class="restaurants_icons icons">
+                        <input type="checkbox" id="restaurant1" name="restaurant-liked" value="1" />
+                        <i class="fa-regular fa-heart icons-notLiked"></i>
+                        <i class="fa-solid fa-heart icons-liked"></i>
+                    </label>
                 </article>
 
                 <article class="restaurants_card restaurants_card_new">
@@ -97,13 +98,14 @@
                                     <h3 class="restaurants_card_fig_caption_title Roboto_bold">La note enchantée</h3>
                                     <p class="restaurants_card_city Roboto_light">Charonne</p>
                                 </div>
-                                <div class="icons">
-                                    <i class="fa-regular fa-heart icons-notLiked"></i>
-                                    <i class="fa-solid fa-heart icons-liked"></i>
-                                </div>
                             </figcaption>
                         </figure>
                     </a>
+                    <label class="restaurants_icons icons">
+                        <input type="checkbox" id="restaurant2" name="restaurant-liked" value="2" />
+                        <i class="fa-regular fa-heart icons-notLiked"></i>
+                        <i class="fa-solid fa-heart icons-liked"></i>
+                    </label>
                 </article>
 
                 <article class="restaurants_card">
@@ -115,13 +117,14 @@
                                     <h3 class="restaurants_card_fig_caption_title Roboto_bold">À la française</h3>
                                     <p class="restaurants_card_city Roboto_light">Cité Rouge</p>
                                 </div>
-                                <div class="icons">
-                                    <i class="fa-regular fa-heart icons-notLiked"></i>
-                                    <i class="fa-solid fa-heart icons-liked"></i>
-                                </div>
                             </figcaption>
                         </figure>
                     </a>
+                    <label class="restaurants_icons icons">
+                        <input type="checkbox" id="restaurant3" name="restaurant-liked" value="3" />
+                        <i class="fa-regular fa-heart icons-notLiked"></i>
+                        <i class="fa-solid fa-heart icons-liked"></i>
+                    </label>
                 </article>
 
                 <article class="restaurants_card">
@@ -133,13 +136,14 @@
                                     <h3 class="restaurants_card_fig_caption_title Roboto_bold">Le délice des sens</h3>
                                     <p class="restaurants_card_city Roboto_light">Folie-Méricourt</p>
                                 </div>
-                                <div class="icons">
-                                    <i class="fa-regular fa-heart icons-notLiked"></i>
-                                    <i class="fa-solid fa-heart icons-liked"></i>
-                                </div>
                             </figcaption>
                         </figure>
                     </a>
+                    <label class="restaurants_icons icons">
+                        <input type="checkbox" id="restaurant4" name="restaurant-liked" value="4" />
+                        <i class="fa-regular fa-heart icons-notLiked"></i>
+                        <i class="fa-solid fa-heart icons-liked"></i>
+                    </label>
                 </article>
             </div>
         </section>
@@ -149,7 +153,7 @@
 
 <!-- FOOTER -->
     <footer class="footer">
-        <section class="footer_container center">
+        <div class="footer_container center">
             <img class="footer_logo" src="img/logo/ohmyfood@2x.svg" alt="ohmyfood-logo" />
 
             <ul class="footer_links">
@@ -158,7 +162,7 @@
                 <li><a href="#" class="footer_link">Mentions légales</a></li>
                 <li><a href="mailto:ohmyfood@contact.com" class="footer_link">Contact</a></li>
             </ul>
-        </section>
+        </div>
     </footer>
 <!-- FOOTER -->
 </body>

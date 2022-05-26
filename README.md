@@ -2,8 +2,10 @@
 
 Add Operation
 
---> Ajout de la section OPERATION
++ correction suite première session :
 
---> Ajout de favicon
++ l'utilisateur peut entrer le nom de la ville de son choix
 
---> Ajout de version responsive pour la section OPERATION
++ lien d'ancrage pour la section restaurant
+
++ animations réglées
