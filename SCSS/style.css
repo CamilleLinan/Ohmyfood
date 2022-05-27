@@ -14,17 +14,28 @@
   src: url("font/Roboto/Roboto-Light.ttf");
 }
 
-.Roboto_bold {
-  font-family: 'Roboto-Bold';
+@-webkit-keyframes new {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.Roboto_light {
-  font-family: 'Roboto-Light';
-}
-
-.center {
-  max-width: 1440px;
-  margin: auto;
+@keyframes new {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 body {
@@ -44,6 +55,19 @@ body li {
 
 input[type="checkbox"] {
   display: none;
+}
+
+.Roboto_bold {
+  font-family: 'Roboto-Bold';
+}
+
+.Roboto_light {
+  font-family: 'Roboto-Light';
+}
+
+.center {
+  max-width: 1440px;
+  margin: auto;
 }
 
 /* HEADER */
@@ -321,6 +345,7 @@ i.fa-solid.location_icon {
 }
 
 .restaurants_card {
+  position: relative;
   margin: 10px 0px 20px 0px;
   border-radius: 20px;
   -webkit-box-shadow: 0 0 16px #0000002e;
@@ -360,15 +385,17 @@ i.fa-solid.location_icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   margin: 0;
   padding: 0px 0px 5px 25px;
   line-height: 10px;
 }
 
 .restaurants_icons {
-  position: relative;
-  bottom: 30px;
-  left: 0px;
+  position: absolute;
+  bottom: 1.9rem;
+  right: 2.3rem;
+  width: 26px;
   margin-top: -20px;
 }
 
@@ -382,7 +409,6 @@ i.fa-solid.location_icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 40px;
   font-size: 25px;
 }
 
@@ -412,6 +438,32 @@ i.fa-solid.location_icon {
   -webkit-transition: opacity 500ms ease-in-out;
   transition: opacity 500ms ease-in-out;
   opacity: 0;
+}
+
+.new {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 18px;
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: #4d7052;
+  z-index: 40;
+  background-color: #99E2D0;
+  -webkit-animation: new 1600ms ease-in-out;
+          animation: new 1600ms ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 /* RESTAURANTS */
@@ -530,6 +582,10 @@ i.fa-solid.location_icon {
   margin-right: 25px;
 }
 
+.menu_header_icons {
+  margin-right: 30px;
+}
+
 .menu_categories {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -601,15 +657,6 @@ i.fa-solid.location_icon {
 .menu_card:hover .menu_card_check_icon {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-}
-
-.menu_card input:checked ~ .menu_card_check {
-  margin: 0;
-}
-
-.menu_card input:checked ~ .menu_card_check i {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
 }
 
 .menu_card_titles {

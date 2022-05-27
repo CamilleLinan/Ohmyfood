@@ -1,6 +1,6 @@
 # Ohmyfood
 
-Add Operation
+Correction 1
 
 + correction suite première session :
 
@@ -11,3 +11,5 @@ Add Operation
 + animations réglées
 
 + check up HTML et CSS valide
+
++ animation cartes "new"

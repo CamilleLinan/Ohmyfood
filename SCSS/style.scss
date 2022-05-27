@@ -15,23 +15,24 @@
     src: url('font/Roboto/Roboto-Light.ttf');
 }
 
-.Roboto_bold {
-    font-family: 'Roboto-Bold';
-}
-
-.Roboto_light {
-    font-family: 'Roboto-Light';
-}
-
-.center {
-    max-width: 1440px;
-    margin: auto;
-}
-
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $bg-clr-main: #F2F2F2;
+
+@keyframes new {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
 
 body {
     font-family: 'Roboto', 'Sans serif';
@@ -50,6 +51,19 @@ body {
 
 input[type="checkbox"] {
     display: none;
+}
+
+.Roboto_bold {
+    font-family: 'Roboto-Bold';
+}
+
+.Roboto_light {
+    font-family: 'Roboto-Light';
+}
+
+.center {
+    max-width: 1440px;
+    margin: auto;
 }
 
 /* HEADER */
@@ -248,6 +262,7 @@ i.fa-solid.location_icon {
     }
 
     &_card {
+        position: relative;
         margin: 10px 0px 20px 0px;
         border-radius: 20px;
         box-shadow: 0 0 16px #0000002e;
@@ -272,6 +287,7 @@ i.fa-solid.location_icon {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
+                position: relative;
                 margin: 0;
                 padding: 0px 0px 5px 25px;
                 line-height: 10px;
@@ -280,9 +296,10 @@ i.fa-solid.location_icon {
     }
 
     &_icons {
-        position: relative;
-        bottom: 30px;
-        left: 0px;
+        position: absolute;
+        bottom: 1.9rem;
+        right: 2.3rem;
+        width: 26px;
         margin-top: -20px;
     }
 
@@ -292,7 +309,6 @@ i.fa-solid.location_icon {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 40px;
     font-size: 25px;
 
     & input[type="checkbox"]:checked~.icons-liked {
@@ -321,6 +337,24 @@ i.fa-solid.location_icon {
         transition: opacity 500ms ease-in-out;
         opacity: 0;
     }
+}
+
+.new {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 18px;
+    margin: 0;
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #4d7052;
+    z-index: 40;
+    background-color: $color-tertiary;
+    animation: new 1600ms ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 /* RESTAURANTS */ 
@@ -423,6 +457,10 @@ i.fa-solid.location_icon {
             font-size: 33px;
             margin-right: 25px;
         }
+
+        &_icons {
+            margin-right: 30px;
+        }
     }
 
     &_categories {
@@ -473,14 +511,6 @@ i.fa-solid.location_icon {
 
         &:hover .menu_card_check_icon {
             transform: rotate(0deg);
-        }
-
-        input:checked ~ .menu_card_check {
-            margin: 0;
-
-            i {
-                transform: rotate(0);
-            }
         }
 
         &_titles {
