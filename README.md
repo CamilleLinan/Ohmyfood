@@ -1,5 +1,5 @@
 # Ohmyfood
 
-Add Menu 4
+Add Loadscreen 
 
-+ Ajout de la quatrième page de menu
++ Ajout du loadscreen
