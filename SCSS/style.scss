@@ -20,6 +20,11 @@ $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $bg-clr-main: #F2F2F2;
 
+$size-bar: 3vh;
+$num-bars: 3;
+$anim-dur: 800ms;
+$anim-delay: $anim-dur / $num-bars;
+
 /* KEYFRAMES */ 
 
 @keyframes loadscreen {
@@ -33,25 +38,17 @@ $bg-clr-main: #F2F2F2;
     }
 }
 
-@keyframes custom-loading {
-    from { 
-        transform: rotate(0deg); 
+@keyframes bars {
+    0% {
+      transform: scaleY(0.5);
+      opacity: 0.7;
     }
     
-    to { 
-        transform: rotate(360deg); 
+    100% {
+      transform: scaleY(1.0);
+      opacity: 1;
     }
-}
-
-@keyframes custom-loading-invert {
-    from { 
-        transform: rotate(0deg); 
-    }
-    
-    to { 
-        transform: rotate(-360deg); 
-    }
-}
+  }
 
 @keyframes new {
     0% {
@@ -101,81 +98,54 @@ input[type="checkbox"] {
     margin: auto;
 }
 
-/* LOADSCREEN */
+/* LOADER */
 
-.loadscreen {
+.loader {
     background: white;
     position: fixed;
-    height: 100%;
-    width: 100%;
     top: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: loadscreen 2s 3s forwards;
-}
-
-.spinner {
-    cursor: progress;
-    position: absolute;
-    width: 100%;
     height: 100%;
+    width: 100%;
+    z-index: 100;
+    animation: loadscreen 1s 4s forwards;
+}
+
+.load {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    display: flex;
+    justify-content: space-around;
+    width: 20vh;
+    height: 15vh;
   
-    &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
+    &_bar {
+        width: 3vh;
         height: 100%;
-        z-index: 10001;
-        overflow: hidden;
-    }
+        border-radius: 20px;
+        animation: bars $anim-dur backwards infinite;
+        animation-direction: alternate;
+        @for $i from 1 through $num-bars {
+            &-#{$i} {
+                animation-delay: $anim-delay * $i;
+            }
+        }
   
-    &::after {
-        box-sizing: border-box;
-        z-index: 10002;
-        content: "";
-        position: absolute;
-        margin: 0;
-        border: 1px solid transparent;
-        border-radius: 50%;
-    }
-  
-    &_big::after {
-        top: 40%;
-        left: 44%;
-        border-top: 5px solid #9356dc;
-        border-left: 5px solid #9356dc;
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        animation: custom-loading 1000ms ease-in infinite;
-    }
-  
-    &_medium::after {
-        top: 42.5%;
-        left: 46%;
-        border-top: 4px solid #FF79DA;
-        border-right: 4px solid #FF79DA;
-        border-radius: 50%;
-        width: 110px;
-        height: 110px;
-        animation: custom-loading-invert 800ms ease-in infinite;
-    }
+        &-1 {
+            background: #9356dc;
+        }
     
-    &_small::after {
-        top: 45%;
-        left: 48%;
-        border-right: 3px solid #99E2D0;
-        border-bottom: 3px solid #99E2D0;
-        border-radius: 50%;
-        width: 70px;
-        height: 70px;
-        animation: custom-loading 600ms ease-in infinite;
+        &-2 {
+            background: #FF79DA;
+        }
+    
+        &-3 {
+            background: #99E2D0;
+        }
     }
 }
 
-/* LOADSCREEN */
+/* LOADER */
 
 /* HEADER */
 
@@ -611,9 +581,14 @@ i.fa-solid.location_icon {
         height: 80px;
         overflow: hidden;
         cursor: pointer;
+        transform: scale(0);
         animation: itemAppear 500ms ease-in-out;
         animation-fill-mode: forwards;
-        transform: scale(0);
+        @for $i from 0 to 9 {
+            .delay_#{$i} {
+                animation-delay: #{$i/6}s;
+            }
+        }
 
         &:hover .menu_card_check {
             margin: 0;
@@ -661,12 +636,6 @@ i.fa-solid.location_icon {
                 transition-duration: 800ms;
             }
         }
-    }
-}
-
-@for $i from 0 to 9 {
-    .delay_#{$i} {
-        animation-delay: #{$i/6}s;
     }
 }
 
