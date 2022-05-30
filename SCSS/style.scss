@@ -101,7 +101,7 @@ input[type="checkbox"] {
 /* LOADER */
 
 .loader {
-    background: white;
+    background: rgba(255, 255, 255, 0.85);
     position: fixed;
     top: 0;
     height: 100%;
@@ -252,10 +252,10 @@ i.fa-solid.location_icon {
     background: linear-gradient($color-secondary, $color-primary);
     border-radius: 40px;
     box-shadow: 2px 5px 20px rgb(167, 167, 167);
-        transition: transform 150ms ease-in-out;
-        &:hover {
-            transform: scale(1.01);
-            background: linear-gradient(180deg, rgba(221,140,198,1) 0%, rgba(178,140,222,1) 100%);
+        
+    &:hover {
+            filter: brightness(1.1);
+            box-shadow: 3px 6px 20px rgb(137, 137, 137);
         }
 }
 
@@ -567,9 +567,11 @@ i.fa-solid.location_icon {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        margin-bottom: 20px;
     }
 
     &_card {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -584,14 +586,14 @@ i.fa-solid.location_icon {
         transform: scale(0);
         animation: itemAppear 500ms ease-in-out;
         animation-fill-mode: forwards;
-        @for $i from 0 to 9 {
-            .delay_#{$i} {
-                animation-delay: #{$i/6}s;
-            }
-        }
 
+        &:hover .menu_card_price {
+            margin-right: 25%;
+        }
+        
         &:hover .menu_card_check {
-            margin: 0;
+            position: absolute;
+            right: 0rem;
         }
 
         &:hover .menu_card_check_icon {
@@ -602,7 +604,6 @@ i.fa-solid.location_icon {
             display: flex;
             flex-direction: column;
             height: auto;
-            width: 100%;
             overflow: hidden;
             & p, h4 {
                 display: block;
@@ -614,28 +615,35 @@ i.fa-solid.location_icon {
         }
 
         &_price {
-            padding-right: 35px;
-            width: 10%;
-            text-align: center;
+            padding-right: 25px;
+            transition-duration: 1200ms;
         }
 
         &_check {
+            position: absolute;
+            right: -13rem;
             align-items: center;
             display: flex;
             justify-content: center;
             background-color: $color-tertiary;
             height: 80px;
             width: 25%;
-            margin-right: -100px;
-            transition-duration: 600ms;
+            transition-duration: 1200ms;
 
             &_icon {
                 color: white;
                 font-size: 28px;
                 transform: rotate(360deg);
                 transition-duration: 800ms;
+                transition-delay: 500ms;
             }
         }
+    }
+}
+
+@for $i from 0 to 9 {
+    .delay_#{$i} {
+        animation-delay: #{$i/6}s;
     }
 }
 
@@ -643,7 +651,7 @@ i.fa-solid.location_icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0px;
+    margin: 20px 0px 35px 0px;
 
     &_link {
         width: 200px;
