@@ -23,7 +23,7 @@ $bg-clr-main: #F2F2F2;
 $size-bar: 3vh;
 $num-bars: 3;
 $anim-dur: 800ms;
-$anim-delay: $anim-dur / $num-bars;
+$anim-delay: calc($anim-dur/$num-bars);
 
 /* KEYFRAMES */ 
 
@@ -652,7 +652,7 @@ i.fa-solid.location_icon {
 
 @for $i from 0 to 9 {
     .delay_#{$i} {
-        animation-delay: #{$i/6}s;
+        animation-delay: 1s * calc($i / 6);
     }
 }
 

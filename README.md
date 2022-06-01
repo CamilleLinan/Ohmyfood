@@ -1,9 +1,5 @@
 # Ohmyfood
 
-Modif Menu Card
+Modif Doss
 
-+ Modification de l'animation des cartes des pages de menus ;
-
-+ Modification de l'animation du bouton ;
-
-+ Modification du fichier JSon.
++ Modification générale des dossiers
