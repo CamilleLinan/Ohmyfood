@@ -1,4 +1,4 @@
-Projet 3 : Ohmyfood! - OpenClassrooms
+# Projet 3 : Ohmyfood! - OpenClassrooms
 
 ![Alt text](/ohmyfoodCover.webp?raw=true "Cover Ohmyfood OpenClassrooms")
 
@@ -12,5 +12,5 @@ Intégrer la maquette créée par le designer UI en mobilefirst en respectant le
 HTML5 / CSS3 / SASS
 
 
-+ Voir le site web : https://camillelinan.github.io/Projet-3-Ohmyfood/
-+ Plus d'informations sur mon portfolio : https://camillelinan.com/project/OhMyFood
+Voir le site web : https://camillelinan.github.io/Projet-3-Ohmyfood/ <br/>
+Plus d'informations sur mon portfolio : https://camillelinan.com/project/OhMyFood
